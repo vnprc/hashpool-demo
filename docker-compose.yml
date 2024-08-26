@@ -1,0 +1,13 @@
+services:
+  testnet4-ckpool:
+    image: testnet4-ckpool
+    container_name: testnet4-ckpool
+    ports:
+      - "8333:8333"
+      - "18332:18332"
+      - "18333:18333"
+      - "28332:28332"
+    volumes:
+      - ./data:/data/.bitcoin
+    restart: unless-stopped
+
